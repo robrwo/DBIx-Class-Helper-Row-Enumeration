@@ -14,7 +14,7 @@ use Sub::Quote ();
 
 # RECOMMEND PREREQ: Ref::Util::XS
 
-our $VERSION = 'v0.1.0';
+our $VERSION = 'v0.1.1';
 
 =head1 SYNOPSIS
 
