@@ -2,7 +2,7 @@ package DBIx::Class::Helper::Row::Enumeration;
 
 # ABSTRACT: Add methods for emum values
 
-use v5.10;
+use v5.10.1;
 
 use strict;
 use warnings;
