@@ -55,7 +55,8 @@ sub add_columns {
                 if $self->can($method);
 
             Sub::Quote::quote_sub $method,
-                qq{ \$_[0]->get_column("${col}") eq "${value}" };
+              qq{ my \$val = \$_[0]->get_column("${col}"); }
+              . qq{ defined(\$val) && \$val eq "${value}" };
 
         }
 
