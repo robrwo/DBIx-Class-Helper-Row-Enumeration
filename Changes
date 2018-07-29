@@ -1,6 +1,8 @@
 Revision history for DBIx-Class-Helper-Row-Enumeration:
 
 {{$NEXT}}
+
+v0.1.1    2018-07-29 18:11:59+01:00 Europe/London
   [Documentation]
   - Fixed typo in SEE ALSO and added link to DBIx::Class.
 
