@@ -108,4 +108,12 @@ sub add_columns {
     return $self;
 }
 
+=head1 SEE ALSO
+
+  L<MooX::Enumeration>
+
+  L<MooseX::Enumeration>
+
+=cut
+
 1;
