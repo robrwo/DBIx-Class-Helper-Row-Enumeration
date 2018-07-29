@@ -4,7 +4,7 @@ DBIx::Class::Helper::Row::Enumeration - Add methods for emum values
 
 # VERSION
 
-version v0.1.0
+version v0.1.1
 
 # SYNOPSIS
 
@@ -119,9 +119,9 @@ This issue will be addressed in a later version.
 
 # SEE ALSO
 
-```
-L<MooseX::Enumeration>
-```
+[DBIx::Class](https://metacpan.org/pod/DBIx::Class)
+
+[MooseX::Enumeration](https://metacpan.org/pod/MooseX::Enumeration)
 
 # SOURCE
 
