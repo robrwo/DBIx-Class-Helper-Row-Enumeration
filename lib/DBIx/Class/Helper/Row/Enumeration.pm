@@ -39,7 +39,7 @@ with a row:
 
 =head1 DESCRIPTION
 
-This plugin is inspired by L<MooX::Enumeration>.
+This plugin is inspired by L<MooseX::Enumeration>.
 
 Suppose your database has a column with an enum value. Checks against
 string values are prone to typos:
@@ -109,8 +109,6 @@ sub add_columns {
 }
 
 =head1 SEE ALSO
-
-  L<MooX::Enumeration>
 
   L<MooseX::Enumeration>
 
