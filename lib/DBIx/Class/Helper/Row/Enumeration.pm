@@ -140,9 +140,13 @@ sub add_columns {
             DBIx::Class::Exception->throw("${method} is already defined")
               if $self->can($method);
 
-            Sub::Quote::quote_sub $method,
-              qq{ my \$val = \$_[0]->get_column("${col}"); }
-              . qq{ defined(\$val) && \$val eq "${value}" };
+            my $code =
+              $info->{is_nullable}
+              ? qq{ my \$val = \$_[0]->get_column("${col}"); }
+              . qq{ defined(\$val) && \$val eq "${value}" }
+              : qq{ \$_[0]->get_column("${col}") eq "${value}" };
+
+            Sub::Quote::quote_sub $method, $code;
 
         }
 

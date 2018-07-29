@@ -17,6 +17,6 @@ can_ok $row, qw/ is_good is_bad is_ugly good_bar coyote
    baz_est_bien baz_est_mal /;
 
 ok $row->$_, $_ for (qw/ is_good coyote baz_est_mal /);
-ok !$row->$_, $_ for (qw/ is_bad is_ugly good_bar baz_est_bien /);
+ok !$row->$_, $_ for (qw/ is_bad is_ugly good_bar baz_est_bien is_success is_fail /);
 
 done_testing;

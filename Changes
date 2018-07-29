@@ -1,6 +1,8 @@
 Revision history for DBIx-Class-Helper-Row-Enumeration:
 
 {{$NEXT}}
+  [Enhancements]
+  - Only check for a defined value if the column is nullable.
 
 v0.1.2    2018-07-29 22:56:43+01:00 Europe/London
   [Tests]
