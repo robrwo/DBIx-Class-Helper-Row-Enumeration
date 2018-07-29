@@ -45,8 +45,6 @@ sub add_columns {
         DBIx::Class::Exception->throw("handles is not a hashref")
             unless Ref::Util::is_plain_hashref($handlers);
 
-        my $acc = $info->{accessor} // $col;
-
         foreach my $handler ( keys %$handlers ) {
             my $value = $handlers->{$handler} or next;
 
@@ -55,7 +53,8 @@ sub add_columns {
             DBIx::Class::Exception->throw("${method} is already defined")
                 if $self->can($method);
 
-            Sub::Quote::quote_sub $method, qq{ \$_[0]->${acc} eq "${value}" };
+            Sub::Quote::quote_sub $method,
+                qq{ \$_[0]->get_column("${col}") eq "${value}" };
 
         }
 
