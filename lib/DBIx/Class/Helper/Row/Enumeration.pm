@@ -55,6 +55,49 @@ method instead:
 
   if ($row->is_fail) { ... }
 
+=head1 Overriding method names
+
+You can override method names by adding an extra C<handles> attribute
+to the column definition:
+
+    bar => {
+        data_type => 'enum',
+        extra     => {
+            list   => [qw/ good bad ugly /],
+            handles => {
+                good_bar => 'good',
+                coyote   => 'ugly',
+            },
+        },
+    },
+
+Note that only methods you specify will be added. In the above case,
+there is no "is_bad" method added.
+
+The C<handles> attribute can also be set to a code reference so that
+method names can be generated dynamically:
+
+    baz => {
+        data_type => 'enum',
+        extra     => {
+            list   => [qw/ good bad ugly /],
+            handles => sub {
+                my ($value, $col, $class) = @_;
+
+                return undef if $value eq 'deprecated';
+
+                return "is_${col}_${value}";
+            },
+        },
+    },
+);
+
+If the function returns C<undef>, then no method will be generated for
+that value.
+
+If C<handles> is set to "0", then no methods will be generated for the
+column at all.
+
 =cut
 
 sub add_columns {
