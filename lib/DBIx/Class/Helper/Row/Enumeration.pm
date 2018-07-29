@@ -12,6 +12,8 @@ use parent 'DBIx::Class::Core';
 use Ref::Util  ();
 use Sub::Quote ();
 
+# RECOMMEND PREREQ: Ref::Util::XS
+
 our $VERSION = 'v0.1.0';
 
 sub add_columns {
