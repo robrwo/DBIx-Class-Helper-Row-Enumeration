@@ -168,7 +168,9 @@ This issue will be addressed in a later version.
 
 =head1 SEE ALSO
 
-  L<MooseX::Enumeration>
+L<DBIx::Class>
+
+L<MooseX::Enumeration>
 
 =head1 append:AUTHOR
 
