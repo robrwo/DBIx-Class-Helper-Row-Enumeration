@@ -114,6 +114,11 @@ sub add_columns {
 
   L<MooseX::Enumeration>
 
+=head1 append:AUTHOR
+
+The initial development of this module was sponsored by Science Photo
+Library L<https://www.sciencephoto.com>.
+
 =cut
 
 1;
