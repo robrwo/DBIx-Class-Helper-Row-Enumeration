@@ -37,7 +37,7 @@ sub add_columns {
 
         if ( Ref::Util::is_plain_coderef($handlers) ) {
             $info->{extra}{handles} =
-              { map { $handlers->( $_, $col, $class ) => $_ }
+              { map { $handlers->( $_, $col, $class ) // 0 => $_ }
                   @{ $info->{extra}{list} } };
             $handlers = $info->{extra}{handles};
         }
@@ -46,6 +46,7 @@ sub add_columns {
             unless Ref::Util::is_plain_hashref($handlers);
 
         foreach my $handler ( keys %$handlers ) {
+            next unless $handler;
             my $value = $handlers->{$handler} or next;
 
             my $method = "${class}::${handler}";
