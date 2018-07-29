@@ -16,6 +16,29 @@ use Sub::Quote ();
 
 our $VERSION = 'v0.1.0';
 
+=head1 SYNOPSIS
+
+In your result class:
+
+  use base qw/DBIx::Class::Core/;
+
+  __PACKAGE__->load_components(qw/ Helper::Row::Enumeration /);
+
+  __PACKAGE__->add_column(
+
+    foo => {
+        data_type => 'enum',
+        extra     => {
+            list => [qw/ good bad ugly /],
+        },
+    },
+
+with a row:
+
+  if ($row->is_good) { ... }
+
+=cut
+
 sub add_columns {
     my ( $self, @cols ) = @_;
 
