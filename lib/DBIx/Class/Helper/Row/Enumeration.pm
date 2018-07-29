@@ -37,6 +37,24 @@ with a row:
 
   if ($row->is_good) { ... }
 
+=head1 DESCRIPTION
+
+This plugin is inspired by L<MooX::Enumeration>.
+
+Suppose your database has a column with an enum value. Checks against
+string values are prone to typos:
+
+  if ($row->result eq 'faol') { ... }
+
+when instead you wanted
+
+  if ($row->result eq 'fail') { ... }
+
+Using this plugin, you can avoid common bugs by checking against a
+method instead:
+
+  if ($row->is_fail) { ... }
+
 =cut
 
 sub add_columns {
