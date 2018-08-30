@@ -16,6 +16,9 @@ use Sub::Quote ();
 
 our $VERSION = 'v0.1.3';
 
+# The names of all methods installed by this module.
+my %MINE;
+
 =head1 SYNOPSIS
 
 In your result class:
@@ -137,8 +140,13 @@ sub add_columns {
 
             my $method = "${class}::${handler}";
 
+            # Keep track of what we've installed, and don't complain about
+            # being asked to reinstall it. This is needed when using
+            # DBIx::Class::Schema::Loader. In theory we should check whether
+            # the current method is the one we installed, and throw anyway if
+            # it isn't, but this seems adequate.
             DBIx::Class::Exception->throw("${method} is already defined")
-              if $self->can($method);
+              if $self->can($method) && !$MINE{$method};
 
             my $code =
               $info->{is_nullable}
@@ -146,6 +154,7 @@ sub add_columns {
               . qq{ defined(\$val) && \$val eq "${value}" }
               : qq{ \$_[0]->get_column("${col}") eq "${value}" };
 
+            $MINE{$method} = 1;
             Sub::Quote::quote_sub $method, $code;
 
         }
