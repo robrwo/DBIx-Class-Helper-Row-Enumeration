@@ -115,7 +115,6 @@ sub add_columns {
         next if ref $col;
 
         $col =~ s/^\+//;
-
         my $info = $self->column_info($col);
 
         next unless $info->{data_type} eq 'enum';
