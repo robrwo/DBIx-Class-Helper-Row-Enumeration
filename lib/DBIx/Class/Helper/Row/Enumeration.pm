@@ -119,6 +119,8 @@ sub add_columns {
 
         next unless $info->{data_type} eq 'enum';
 
+        next unless exists $info->{extra}{list};
+
         my $handlers = $info->{extra}{handles} //= sub { "is_" . $_[0] };
 
         next unless $handlers;
