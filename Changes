@@ -4,6 +4,9 @@ Revision history for DBIx-Class-Helper-Row-Enumeration:
   [Enhancements]
   - Only check for a defined value if the column is nullable.
 
+  [Bug Fixes]
+  - Allow classes to be reloaded, #1 @arc
+
 v0.1.2    2018-07-29 22:56:43+01:00 Europe/London
   [Tests]
   - Add SQL::Translator as a test prerequisite.
