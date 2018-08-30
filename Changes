@@ -4,6 +4,8 @@ Revision history for DBIx-Class-Helper-Row-Enumeration:
   [Bug Fixes]
   - Require enum columns to have a list of values.
 
+  - Do not create a "0" method for unspecified coderef handers.
+
   [Other]
   - Minor code reformatting.
 

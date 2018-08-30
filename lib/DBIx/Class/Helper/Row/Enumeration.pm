@@ -126,9 +126,18 @@ sub add_columns {
         next unless $handlers;
 
         if ( Ref::Util::is_plain_coderef($handlers) ) {
-            $info->{extra}{handles} =
-              { map { $handlers->( $_, $col, $class ) // 0 => $_ }
-                  @{ $info->{extra}{list} } };
+            $info->{extra}{handles} = {
+                map {
+
+                    if ( my $method = $handlers->( $_, $col, $class ) ) {
+                        ( $method => $_ )
+                    }
+                    else {
+                        ()
+                    }
+
+                } @{ $info->{extra}{list} }
+            };
             $handlers = $info->{extra}{handles};
         }
 
