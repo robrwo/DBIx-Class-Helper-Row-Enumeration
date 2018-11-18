@@ -7,8 +7,6 @@ use v5.10.1;
 use strict;
 use warnings;
 
-use parent 'DBIx::Class::Core';
-
 use Ref::Util  ();
 use Sub::Quote ();
 

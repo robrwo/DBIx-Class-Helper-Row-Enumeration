@@ -1,6 +1,9 @@
 Revision history for DBIx-Class-Helper-Row-Enumeration:
 
 {{$NEXT}}
+  [Enhancements]
+  - Removed explicit inheritance from DBIx::Class::Core.
+
   [Documentation]
   - Added INSTALL file to the distribution.
 
