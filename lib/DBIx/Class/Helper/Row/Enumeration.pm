@@ -101,6 +101,10 @@ column at all.
 
 =cut
 
+=for Pod::Coverage add_columns
+
+=cut
+
 sub add_columns {
     my ( $self, @cols ) = @_;
 
