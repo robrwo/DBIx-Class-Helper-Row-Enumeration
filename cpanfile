@@ -1,7 +1,6 @@
 requires "DBIx::Class::Core" => "0";
 requires "Ref::Util" => "0";
 requires "Sub::Quote" => "0";
-requires "parent" => "0";
 requires "perl" => "v5.10.1";
 recommends "Ref::Util::XS" => "0";
 
