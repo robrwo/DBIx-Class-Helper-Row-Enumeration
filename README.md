@@ -139,7 +139,7 @@ __PACKAGE__->add_columns(
 );
 ```
 
-Note that this is by design, since the intention column modifiers is
+Note that this is by design, since the intention of column modifiers is
 to override existing values.
 
 # SEE ALSO
