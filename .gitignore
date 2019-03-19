@@ -2,3 +2,4 @@ DBIx-Class-Helper-Row-Enumeration-*/
 DBIx-Class-Helper-Row-Enumeration-*.tar.gz
 .build/
 cpanfile.snapshot
+local/
