@@ -211,7 +211,7 @@ if you want to specify custom handlers, e.g.
 
   );
 
-Note that this is by design, since the intention column modifiers is
+Note that this is by design, since the intention of column modifiers is
 to override existing values.
 
 =head1 SEE ALSO
