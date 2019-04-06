@@ -1,6 +1,8 @@
 Revision history for DBIx-Class-Helper-Row-Enumeration:
 
 {{$NEXT}}
+
+v0.1.7    2019-04-06 11:40:27+01:00 Europe/London
   [Tests]
   - Include more diagnostics for tests.
 
