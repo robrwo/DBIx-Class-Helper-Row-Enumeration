@@ -1,6 +1,8 @@
 Revision history for DBIx-Class-Helper-Row-Enumeration:
 
 {{$NEXT}}
+  [Tests]
+  - Include more diagnostics for tests.
 
 v0.1.6    2019-03-19 09:46:32+00:00 Europe/London
   [Bug Fixes]
@@ -11,9 +13,6 @@ v0.1.6    2019-03-19 09:46:32+00:00 Europe/London
   - Fixed typo.
 
   - Bump copyright year.
-
-  [Tests]
-  - Include more diagnostics for tests.
 
 v0.1.5    2018-11-18 16:48:14+00:00 Europe/London
   [Enhancements]
