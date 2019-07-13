@@ -12,7 +12,7 @@ use Sub::Quote ();
 
 # RECOMMEND PREREQ: Ref::Util::XS
 
-our $VERSION = 'v0.1.8';
+our $VERSION = 'v0.1.9';
 
 # The names of all methods installed by this module.
 my %MINE;
