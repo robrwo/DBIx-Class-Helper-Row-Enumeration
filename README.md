@@ -4,7 +4,7 @@ DBIx::Class::Helper::Row::Enumeration - Add methods for emum values
 
 # VERSION
 
-version v0.1.7
+version v0.1.8
 
 # SYNOPSIS
 
