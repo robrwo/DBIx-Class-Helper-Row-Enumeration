@@ -148,6 +148,9 @@ to override existing values.
 
 [MooseX::Enumeration](https://metacpan.org/pod/MooseX::Enumeration)
 
+The module [DBIx::Class::Helper::ResultSet::EnumMethods](https://metacpan.org/pod/DBIx::Class::Helper::ResultSet::EnumMethods) adds
+similar methods to resultsets.
+
 # SOURCE
 
 The development version is on github at [https://github.com/robrwo/DBIx-Class-Helper-Row-Enumeration](https://github.com/robrwo/DBIx-Class-Helper-Row-Enumeration)
