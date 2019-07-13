@@ -220,6 +220,9 @@ L<DBIx::Class>
 
 L<MooseX::Enumeration>
 
+The module L<DBIx::Class::Helper::ResultSet::EnumMethods> adds
+similar methods to resultsets.
+
 =head1 append:AUTHOR
 
 The initial development of this module was sponsored by Science Photo

@@ -1,6 +1,8 @@
 Revision history for DBIx-Class-Helper-Row-Enumeration:
 
 {{$NEXT}}
+  [Documentation]
+  - Mention DBIx::Class::Helper::ResultSet::EnumMethods in SEE ALSO.
 
 v0.1.7    2019-04-06 11:40:27+01:00 Europe/London
   [Tests]
